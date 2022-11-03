@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('./img/fondoPoke.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Card{
+  background-color: #00000088;
+}
+
+.Text{
+  text-shadow: 0px 0px 5px #000;
+}
+
+.pokeballIcon {
+  background-image: url('./img/pokeballIcon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.divider {
+  margin: 0px;
+}
+
+
+.fire {
+  background: #fa9302;
+  background: radial-gradient(circle, rgba(250, 147, 2, 1) 26%, rgba(255, 0, 0, 1) 100%);
+}
+
+.water {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 200, 233, 1) 100%);
+}
+
+.electric {
+  background: rgb(110, 219, 227);
+  background: radial-gradient(circle, rgba(110, 219, 227, 1) 0%, rgba(0, 10, 190, 1) 100%);
+}
+
+.bug {
+  background: rgb(67, 170, 70);
+  background: radial-gradient(circle, rgba(67, 170, 70, 1) 0%, rgba(31, 98, 4, 1) 100%);
+}
+
+.grass {
+  background: rgb(116, 245, 119);
+  background: radial-gradient(circle, rgba(116, 245, 119, 1) 0%, rgba(117, 222, 0, 1) 100%);
+}
+
+.poison {
+  background: rgb(132, 81, 187);
+  background: radial-gradient(circle, rgba(132, 81, 187, 1) 0%, rgba(79, 38, 122, 1) 100%);
+}
+
+.fairy {
+  background: rgb(222, 49, 126);
+  background: radial-gradient(circle, rgba(222, 49, 126, 1) 0%, rgba(120, 0, 55, 1) 100%);
+}
+
+.normal {
+  background: rgb(198, 96, 168);
+  background: radial-gradient(circle, rgba(198, 96, 168, 1) 0%, rgba(77, 4, 51, 1) 100%);
+}
+
+.dark {
+  background: rgb(92, 86, 90);
+  background: radial-gradient(circle, rgba(92, 86, 90, 1) 13%, rgba(0, 0, 0, 1) 100%);
+}
+
+.ground {
+  background: rgb(213, 160, 80);
+  background: radial-gradient(circle, rgba(213, 160, 80, 1) 14%, rgba(138, 93, 35, 1) 100%);
+}
