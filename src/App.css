@@ -1,8 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
 
 .App{
   width: 100%;
@@ -11,14 +7,21 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'Dhurjati', sans-serif;
+  /* overflow-x: hidden; */
 }
 
 .Card{
-  background-color: #00000088;
+  /* background-color: #00000088; */
+  background: #ffffff00;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 5;
 }
 
+
 .Text{
-  text-shadow: 0px 0px 5px #000;
+  text-shadow: 0px 0px 2px #000;
 }
 
 .pokeballIcon {
@@ -32,7 +35,65 @@
   margin: 0px;
 }
 
+.containerDetail{
+  background: #ffffff00;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
 
+/* POSIBLES FONDOS DE PANTALLA  */
+
+.containerItemDetailgrass{
+  background-image: url('./img/venusaur.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.containerItemDetailfire{
+  background-image: url('./img/dragon2.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.containerItemDetailelectric{
+  background-image: url('./img/electric.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.containerItemDetailwater{
+  background-image: url('./img/agua.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.containerItemDetailfairy{
+  background-image: url('./img/fairy.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.containerItemDetailghost{
+  background-image: url('./img/ghost.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.containerItemDetailfighting, .containerItemDetailpsychic, .containerItemDetailnormal, .containerItemDetailflying, .containerItemDetailrock, .containerItemDetailpoison, .containerItemDetailfight, .containerItemDetailsteel, .containerItemDetailground, .containerItemDetailice, .containerItemDetailbug{
+  background-image: url('./img/alls.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.textStatShadow{
+  text-shadow: 0px 0px 2px #191d24;
+}
+
+/* COLOR SEGUN TIPO  */
 .fire {
   background: #fa9302;
   background: radial-gradient(circle, rgba(250, 147, 2, 1) 26%, rgba(255, 0, 0, 1) 100%);
@@ -59,7 +120,7 @@
 }
 
 .poison {
-  background: rgb(132, 81, 187);
+  background: #4c2a70;
   background: radial-gradient(circle, rgba(132, 81, 187, 1) 0%, rgba(79, 38, 122, 1) 100%);
 }
 
@@ -82,3 +143,4 @@
   background: rgb(213, 160, 80);
   background: radial-gradient(circle, rgba(213, 160, 80, 1) 14%, rgba(138, 93, 35, 1) 100%);
 }
+

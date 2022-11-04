@@ -15,7 +15,7 @@ export const ItemList = () => {
     useEffect(() => {
 
         const callApi = async () => {
-            await fetch(`https://pokeapi.co/api/v2/pokemon?limit=15&offset=${offset}`)
+            await fetch(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${offset}`)
                 .then(response => response.json())
                 .then(data => {
                     setPokemons(data.results)
@@ -29,8 +29,6 @@ export const ItemList = () => {
 
 
 
-
-
     return (
         <div className='flex flex-col mx-auto max-w-7xl'>
             <h1 className='m-10 mx-auto'>
@@ -41,7 +39,7 @@ export const ItemList = () => {
                     ?
                     <Loader />
                     :
-                    
+
                     // LISTADO DE POKEMONS 
                     <>
                         <ul className='grid grid-cols-1 gap-2 md:grid-cols-3 '>
@@ -55,7 +53,7 @@ export const ItemList = () => {
                                 })
                             }
                         </ul>
-                        
+
                         {/* PAGINATION  */}
                         <div className='flex justify-center m-5'>
                             <Pagination page={page} setPage={setPage} offset={offset} setOffset={setOffset} />

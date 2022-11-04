@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { IconContext } from "react-icons";
 import { GiFairyWings, GiPsychicWaves, GiGroundSprout, GiStonePile, GiAngelWings } from 'react-icons/gi'
 import { Link } from 'react-router-dom';
+import { Loader } from './Loader';
 
 
 export const Item = ({ pokemon }) => {
@@ -17,7 +18,6 @@ export const Item = ({ pokemon }) => {
                 .then(response => response.json())
                 .then(data => {
                     setPokemonInfo(data)
-                    // setImg(data.sprites.other.home.front_default)
                     setImg(data.sprites.other.dream_world.front_default)
                     setLoading(false)
                 })
@@ -26,12 +26,14 @@ export const Item = ({ pokemon }) => {
         callApi()
     }, [pokemon])
 
+    // console.log(pokemonInfo);
+
     return (
         <div className='flex flex-col justify-evenly rounded-xl'>
             {
                 loading
                     ?
-                    <p>Cargando..</p>
+                    <Loader />
                     :
                     <>
                         <div className='flex flex-col justify-evenly'>
@@ -47,14 +49,14 @@ export const Item = ({ pokemon }) => {
 
                             {/* HP  */}
                             <progress className="w-32 h-1 mx-auto mt-1 progress-error" value={pokemonInfo.stats[0].base_stat} max="100"></progress>
-                            <label className='mt-1 text-xs text-center text-white Text'>HP: {pokemonInfo.stats[0].base_stat}</label>
+                            <label className='mt-1 text-sm text-center text-white Text'>HP: {pokemonInfo.stats[0].base_stat}</label>
 
                             {/* TIPO  */}
                             <div className='flex items-center justify-center pb-2 mt-1'>
                                 {
                                     pokemonInfo.types.map((pokemon, i) => {
                                         return (
-                                            <p key={i} className='flex items-center px-2 pt-2 text-white capitalize text-md Text'>
+                                            <p key={i} className='flex items-center px-2 pt-2 text-lg text-white capitalize Text'>
                                                 {pokemon.type.name === 'fire' && <i className="text-red-500 fa-solid fa-fire-flame-curved"></i>}
                                                 {pokemon.type.name === 'water' && <i className="text-blue-400 fa-solid fa-droplet"></i>}
                                                 {pokemon.type.name === 'bug' && <i className="fa-solid fa-bug text-amber-500"></i>}
