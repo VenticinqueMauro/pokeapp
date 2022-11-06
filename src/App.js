@@ -5,7 +5,7 @@ import { ItemList } from './components/ItemList';
 
 function App() {
   return (
-    <div className="App">
+    <div className="min-h-screen App">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<ItemList />} />

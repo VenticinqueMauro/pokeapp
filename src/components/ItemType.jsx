@@ -4,9 +4,7 @@ import { GiFairyWings, GiPsychicWaves, GiGroundSprout, GiStonePile, GiAngelWings
 import { Link } from 'react-router-dom';
 import { Loader } from './Loader';
 
-
-export const Item = ({pokemon}) => {
-
+export const ItemType = ({pokemon}) => {
     const [pokemonInfo, setPokemonInfo] = useState([])
     const [img, setImg] = useState('')
     const [loading, setLoading] = useState(true)

@@ -70,12 +70,12 @@ export const ItemDetail = () => {
                         <Loader />
                     </div>
                     :
-                    <div className='flex flex-col items-center justify-center m-5 rounded-3xl md:flex md:flex-row md:justify-center containerDetail'>
+                    <div className='flex flex-col items-center justify-center rounded-3xl md:flex md:flex-row md:justify-center containerDetail'>
 
                         {/* IMAGEN  */}
 
                         <div>
-                            <img className='mx-auto' src={img} alt={pokemon.name} width={400} />
+                            <img className='mx-auto' src={img} alt={pokemon.name} width={300} />
                         </div>
 
                         {/* DESCRIPCION  */}
@@ -235,7 +235,7 @@ export const ItemDetail = () => {
                             </div>
 
                             {/* VOLVER  */}
-                            <div className='mx-auto text-4xl text-white hover:text-[#282b31] ease-out duration-300'>
+                            <div className='mx-auto text-5xl text-white hover:text-[#282b31] ease-out duration-300'>
                                 <Link to='/'>
                                     <MdCancel />
                                 </Link>

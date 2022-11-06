@@ -81,7 +81,7 @@
   background-repeat: no-repeat;
 }
 
-.containerItemDetailfighting, .containerItemDetailpsychic, .containerItemDetailnormal, .containerItemDetailflying, .containerItemDetailrock, .containerItemDetailpoison, .containerItemDetailfight, .containerItemDetailsteel, .containerItemDetailground, .containerItemDetailice, .containerItemDetailbug{
+.containerItemDetailfighting, .containerItemDetailpsychic, .containerItemDetailnormal, .containerItemDetailflying, .containerItemDetailrock, .containerItemDetailpoison, .containerItemDetailfight, .containerItemDetailsteel, .containerItemDetailground, .containerItemDetailice, .containerItemDetailbug, .containerItemDetaildragon{
   background-image: url('./img/alls.jpg');
   background-position: center;
   background-size: cover;
