@@ -42,6 +42,10 @@
   z-index: 5;
 }
 
+.pokemonsName{
+  box-shadow: 2px 2px 20px #fbbf24;
+}
+
 /* POSIBLES FONDOS DE PANTALLA  */
 
 .containerItemDetailgrass{

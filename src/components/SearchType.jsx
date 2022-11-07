@@ -21,10 +21,9 @@ export const SearchType = ({ setType }) => {
 
 
     return (
-        <div className='mx-auto'>
             <div className="dropdown">
-                <label tabIndex={0} className="m-1 bg-transparent border btn btn-sm border-amber-400 hover:border-amber-400">Pokemon Types</label>
-                <ul tabIndex={0} className="p-2 shadow dropdown-content menu bg-base-100 rounded-box w-52 ">
+                <label tabIndex={0} className="m-1 text-white bg-transparent border btn btn-sm border-amber-400 hover:border-amber-400">Pokemon Types</label>
+                <ul tabIndex={0} className="p-2 text-white bg-black shadow dropdown-content menu rounded-box w-52">
                     <li
                         onClick={() => setType('')}
                     ><a>All</a>
@@ -35,13 +34,12 @@ export const SearchType = ({ setType }) => {
                                 <li key={i}
                                     onClick={() => setType(type.name)}
                                 >
-                                    <a>{type.name}</a>
+                                    <a>{type.name !== 'shadow' && type.name !== 'unknown' && type.name}</a>
                                 </li>
                             )
                         })
                     }
                 </ul>
             </div>
-        </div>
     )
 }
