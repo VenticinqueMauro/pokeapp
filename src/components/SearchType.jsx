@@ -21,7 +21,7 @@ export const SearchType = ({ setType }) => {
 
 
     return (
-            <div className="dropdown">
+            <div className="m-2 dropdown">
                 <label tabIndex={0} className="m-1 text-white bg-transparent border btn btn-sm border-amber-400 hover:border-amber-400">Pokemon Types</label>
                 <ul tabIndex={0} className="p-2 text-white bg-black shadow dropdown-content menu rounded-box w-52">
                     <li

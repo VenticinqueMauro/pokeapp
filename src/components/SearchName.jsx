@@ -7,6 +7,7 @@ export const SearchName = ({ setName, setIsSearch, isSearch, setFueBuscado }) =>
 
     const nameRef = useRef()
 
+
     const handleSubmit = (e) => {
         e.preventDefault()
         setFueBuscado(true)
@@ -22,7 +23,7 @@ export const SearchName = ({ setName, setIsSearch, isSearch, setFueBuscado }) =>
     }
 
     return (
-        <div>
+        <div className='m-2'>
             <div className="form-control">
                 <form className="input-group input-group-sm" onSubmit={handleSubmit}>
                     <input type="text" placeholder="Search Pokemon" className="text-white placeholder-white bg-transparent input input-sm border-amber-400" ref={nameRef} />

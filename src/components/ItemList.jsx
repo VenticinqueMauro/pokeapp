@@ -5,6 +5,7 @@ import titulo from '../img/pokemonTitle.png'
 import { Pagination } from './Pagination'
 import { SearchType } from './SearchType'
 import { SearchName } from './SearchName'
+import { Link } from 'react-router-dom'
 
 export const ItemList = () => {
 
@@ -27,7 +28,9 @@ export const ItemList = () => {
                 .then(response => response.json())
                 .then(data => {
                     setPokemons(data.results)
-                    setLoading(false)
+                    setTimeout(() => {
+                        setLoading(false)
+                    }, 1500);
                 })
         }
 
@@ -72,10 +75,12 @@ export const ItemList = () => {
     return (
         <div className='flex flex-col mx-auto max-w-7xl'>
             <h1 className='m-10 mx-auto'>
-                <img src={titulo} alt='pokemon' width={500} />
+                <Link to='/'>
+                    <img className='w-[280px] md:w-[350px] lg:w-[400px]' src={titulo} alt='pokemon' />
+                </Link>
             </h1>
 
-            <div className='flex items-center justify-around'>
+            <div className='flex flex-col items-center justify-around'>
                 <SearchType type={type} setType={setType} />
                 <SearchName setName={setName} isSearch={isSearch} setIsSearch={setIsSearch} setFueBuscado={setFueBuscado} />
             </div>
@@ -95,9 +100,12 @@ export const ItemList = () => {
                                     ?
                                     filterPokemonsName.map((pokemon, i) => {
                                         return (
-                                            <li key={i} className='flex flex-col justify-center w-64 p-1 m-3 mx-auto bg-transparent border border-amber-400 rounded-xl Card pokemonsName'>
-                                                <Item pokemon={pokemon} />
-                                            </li>
+                                            <>
+                                                <li key={i} className='flex flex-col justify-center w-64 p-1 m-3 mx-auto bg-transparent border border-amber-400 rounded-xl Card pokemonsName'>
+                                                    <Item pokemon={pokemon} />
+                                                </li>
+                                                <div className="p-4 divider"></div>
+                                            </>
                                         )
                                     })
                                     :
@@ -109,6 +117,8 @@ export const ItemList = () => {
                                     </div>
                             }
                         </div>
+
+                        {/* LISTADO DE POKEMONS X 12  */}
 
                         <ul className='grid grid-cols-1 gap-2 md:grid-cols-3'>
                             {
